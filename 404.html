@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Not found</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // Anything else under Event Calendar NG's old address goes to the same place under the new one
+    var old = "/plasma-applet-eventcalendar/";
+    if (location.pathname.indexOf(old) === 0) {
+      location.replace("/event-calendar-ng-plasmoid/" + location.pathname.slice(old.length) + location.search + location.hash);
+    }
+  </script>
+  <style>body { font: 16px/1.5 system-ui, sans-serif; margin: 15vh auto; max-width: 560px; padding: 0 16px; }</style>
+</head>
+<body>
+  <h1>Not found</h1>
+  <p>This page doesn't exist. <a href="/">Back to divinae.github.io</a></p>
+</body>
+</html>
