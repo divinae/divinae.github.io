@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jakub Lipiński</title>
-  <meta name="description" content="Jakub Lipiński: Android developer. KDE Plasma 6 widgets and effects (Glance, Fokus, Shift, Karousel Overview, USwitch), maintained forks (Event Calendar NG, Taskline) and LogLens.">
+  <meta name="description" content="Jakub Lipiński: Android developer. KDE Plasma 6 widgets and effects (Glance, Fokus, Shift, Karousel Overview, USwitch), Event Calendar NG (a redesign of Event Calendar), the Taskline fork, and LogLens.">
   <meta property="og:title" content="Jakub Lipiński">
   <meta property="og:description" content="Android developer. KDE Plasma 6 widgets and effects, and LogLens, in spare time.">
   <meta property="og:image" content="https://divinae.github.io/assets/glance.webp">
@@ -107,6 +107,7 @@
     .featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.25fr 1fr; }
     .featured .shot { aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--line); }
     .featured .body { padding: 26px 28px; justify-content: center; }
+    .featured .shot.contain img { padding: 22px; }
     .featured h3 { font-size: 26px; }
     .featured p { font-size: 16.5px; }
     @media (max-width: 760px) {
@@ -163,8 +164,8 @@
   <main>
     <section class="wrap" id="plasma">
       <h2>KDE Plasma</h2>
-      <p class="lead">Widgets and effects for Plasma 6, most of them on the KDE Store. Two are forks of
-        other people's widgets, marked as such.</p>
+      <p class="lead">Widgets and effects for Plasma 6, most of them on the KDE Store. Two started from
+        other people's widgets, and say so.</p>
       <div class="grid">
 
         <article class="card featured" data-repo="glance-plasmoid">
@@ -179,14 +180,25 @@
           </div>
         </article>
 
+        <article class="card featured" data-repo="focus-plasmoid">
+          <div class="shot contain"><img src="assets/fokus.webp" alt="Fokus: the dial mid-session, today drawn as a clock, and the task list" loading="lazy"></div>
+          <div class="body">
+            <div class="title"><h3>Fokus</h3><span class="meta">v3.2.0 <span class="stars"></span></span></div>
+            <p>A pomodoro and flowmodoro timer with a task list, today drawn as a clock, and a break
+              overlay on every screen that makes you take the break.</p>
+            <div class="chips"><span class="chip">QML</span><span class="chip">JavaScript</span><span class="chip">Plasma 6</span></div>
+            <div class="actions"><a href="https://store.kde.org/p/2117117/">KDE Store</a><a href="https://github.com/divinae/focus-plasmoid">GitHub</a></div>
+          </div>
+        </article>
+
         <article class="card" data-repo="event-calendar-ng-plasmoid">
           <div class="shot"><img style="object-position: left top" src="assets/eventcalendar.webp" alt="Event Calendar NG's Day view" loading="lazy"></div>
           <div class="body">
-            <div class="title"><h3>Event Calendar NG</h3><span class="badge">Fork</span><span class="meta">v1.22.0 <span class="stars"></span></span></div>
+            <div class="title"><h3>Event Calendar NG</h3><span class="badge">Redesign</span><span class="meta">v1.22.0 <span class="stars"></span></span></div>
             <p>Your day, one click from the clock: calendar, agenda, tasks, meetings with one-click
               Join, and the weather.</p>
-            <p class="credit">My redesign of <a href="https://github.com/Zren/plasma-applet-eventcalendar">Event Calendar</a>
-              by Chris Holland (Zren), via <a href="https://github.com/ALikesToCode/plasma-applet-eventcalendar">ALikesToCode's Plasma 6 port</a>.</p>
+            <p class="credit">A complete redesign of <a href="https://github.com/Zren/plasma-applet-eventcalendar">Event Calendar</a>
+              by Chris Holland (Zren), which it started from via <a href="https://github.com/ALikesToCode/plasma-applet-eventcalendar">ALikesToCode's Plasma 6 port</a>.</p>
             <div class="chips"><span class="chip">QML</span><span class="chip">JavaScript</span><span class="chip">Google · CalDAV</span></div>
             <div class="actions"><a href="https://divinae.github.io/event-calendar-ng-plasmoid/">Website</a><a href="https://store.kde.org/p/2379570/">KDE Store</a><a href="https://github.com/divinae/event-calendar-ng-plasmoid">GitHub</a></div>
           </div>
@@ -200,6 +212,28 @@
               desktop as a strip of its windows, off-screen columns too. Drag, stack and search.</p>
             <div class="chips"><span class="chip">KWin effect</span><span class="chip">QML</span><span class="chip">Wayland</span></div>
             <div class="actions"><a href="https://store.kde.org/p/2379855/">KDE Store</a><a href="https://github.com/divinae/karousel-overview">GitHub</a></div>
+          </div>
+        </article>
+
+        <article class="card" data-repo="shift-plasmoid">
+          <div class="shot contain"><img src="assets/shift.webp" alt="Shift's popup: sitting, with the week so far" loading="lazy"></div>
+          <div class="body">
+            <div class="title"><h3>Shift</h3><span class="meta">v1.2.3 <span class="stars"></span></span></div>
+            <p>Reminds you to switch between sitting and standing, counts your standing time against
+              a goal, and moves a motorized desk (IKEA Idåsen, Linak) for you.</p>
+            <div class="chips"><span class="chip">QML</span><span class="chip">Bluetooth desk</span><span class="chip">Plasma 6</span></div>
+            <div class="actions"><a href="https://store.kde.org/p/2379558/">KDE Store</a><a href="https://github.com/divinae/shift-plasmoid">GitHub</a></div>
+          </div>
+        </article>
+
+        <article class="card" data-repo="uswitch">
+          <div class="shot contain"><img src="assets/uswitch.webp" alt="USwitch's popup: app shortcuts, the session, Lock, Sleep and Leave" loading="lazy"></div>
+          <div class="body">
+            <div class="title"><h3>USwitch</h3><span class="meta">v2.1.0 <span class="stars"></span></span></div>
+            <p>Plasma's User Switcher with your apps in it: the ones you open most, your session, and
+              Lock, Sleep and Leave, one click from the panel.</p>
+            <div class="chips"><span class="chip">QML</span><span class="chip">C++</span><span class="chip">Plasma 6</span></div>
+            <div class="actions"><a href="https://store.kde.org/p/2135898/">KDE Store</a><a href="https://github.com/divinae/uswitch">GitHub</a></div>
           </div>
         </article>
 
@@ -233,39 +267,6 @@
               Vitaliy Elin, which builds on FancyTasksPlus and the original FancyTasks.</p>
             <div class="chips"><span class="chip">QML</span><span class="chip">Python</span><span class="chip">Plasma 6.5+</span></div>
             <div class="actions"><a href="https://github.com/divinae/taskline">GitHub</a></div>
-          </div>
-        </article>
-
-        <article class="card" data-repo="focus-plasmoid">
-          <div class="shot contain"><img src="assets/fokus.webp" alt="Fokus's dial in the middle of a focus session" loading="lazy"></div>
-          <div class="body">
-            <div class="title"><h3>Fokus</h3><span class="meta">v3.2.0 <span class="stars"></span></span></div>
-            <p>A pomodoro and flowmodoro timer with a task list, today drawn as a clock, and a break
-              overlay on every screen that makes you take the break.</p>
-            <div class="chips"><span class="chip">QML</span><span class="chip">JavaScript</span><span class="chip">Plasma 6</span></div>
-            <div class="actions"><a href="https://store.kde.org/p/2117117/">KDE Store</a><a href="https://github.com/divinae/focus-plasmoid">GitHub</a></div>
-          </div>
-        </article>
-
-        <article class="card" data-repo="shift-plasmoid">
-          <div class="shot contain"><img src="assets/shift.webp" alt="Shift's popup: sitting, with the week so far" loading="lazy"></div>
-          <div class="body">
-            <div class="title"><h3>Shift</h3><span class="meta">v1.2.3 <span class="stars"></span></span></div>
-            <p>Reminds you to switch between sitting and standing, counts your standing time against
-              a goal, and moves a motorized desk (IKEA Idåsen, Linak) for you.</p>
-            <div class="chips"><span class="chip">QML</span><span class="chip">Bluetooth desk</span><span class="chip">Plasma 6</span></div>
-            <div class="actions"><a href="https://store.kde.org/p/2379558/">KDE Store</a><a href="https://github.com/divinae/shift-plasmoid">GitHub</a></div>
-          </div>
-        </article>
-
-        <article class="card" data-repo="uswitch">
-          <div class="shot contain"><img src="assets/uswitch.webp" alt="USwitch's popup: app shortcuts, the session, Lock, Sleep and Leave" loading="lazy"></div>
-          <div class="body">
-            <div class="title"><h3>USwitch</h3><span class="meta">v2.1.0 <span class="stars"></span></span></div>
-            <p>Plasma's User Switcher with your apps in it: the ones you open most, your session, and
-              Lock, Sleep and Leave, one click from the panel.</p>
-            <div class="chips"><span class="chip">QML</span><span class="chip">C++</span><span class="chip">Plasma 6</span></div>
-            <div class="actions"><a href="https://store.kde.org/p/2135898/">KDE Store</a><a href="https://github.com/divinae/uswitch">GitHub</a></div>
           </div>
         </article>
 
